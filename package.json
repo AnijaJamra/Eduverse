@@ -5,9 +5,10 @@
   "scripts": {
     "server": "node server/server.js",
     "client": "cd client && npm run dev",
-    "build":"npm install && cd client && npm install --legacy-peer-deps",
-    "dev": "concurrently \" npm run server\" \"npm run client\""
-},
+    "build": "npm install && cd client && npm install --legacy-peer-deps && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server/server.js"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -25,4 +26,3 @@
     "nodemon": "^3.1.10"
   }
 }
-
